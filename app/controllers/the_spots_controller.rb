@@ -1,0 +1,2 @@
+class TheSpotsController < ApplicationController
+end

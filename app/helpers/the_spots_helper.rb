@@ -1,0 +1,2 @@
+module TheSpotsHelper
+end

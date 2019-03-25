@@ -1,0 +1,22 @@
+<h1>Make a Post</h1>
+
+<%= form_for @post  do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %><br>
+  <%= f.label :category %>
+  <%= f.collection_select :category_id, @categories, :id, :name, prompt: true %><br>
+  <%= f.label :food %>
+  <%= f.text_field :food %><br>
+  <%= f.label:the_spot %>
+  <%= f.collection_select :the_spot_id, @the_spots, :id, :name, prompt: true %><br>
+  <%= f.label :rating %>
+  <%= f.number_field :rating, class: :text_field, step: :any %><br>
+  <%= f.label :review %>
+  <%= f.text_area :review %><br>
+  <%= f.label :foodie %>
+  <%= f.collection_select :foodie_id, @foodies, :id, :username, prompt: true %><br>
+  <%= f.file_field :image %>
+  <%= f.submit %>
+
+<% end %>

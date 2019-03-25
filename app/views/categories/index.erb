@@ -1,0 +1,7 @@
+<h1>Awfully Delicious</h1>
+<% @categories.each do |c| %>
+<%= link_to c.name, category_path(c) %><br>
+<% c.posts.each do |p| %>
+<%= image_tag p.image %>
+  <% end %>
+<% end %>
